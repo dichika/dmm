@@ -12,7 +12,7 @@ getCount("検索ワード")
 ```
 
 - search and get information about items
-
+Now, we implemented for just title, date and price.
 ```r
 getItemInfo("検索ワード")
 ```
