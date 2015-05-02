@@ -38,10 +38,7 @@ getItemInfo <- function(keyword, api_id=options()$DMM_API_ID,affiliate_id=option
   data.frame(
     title = xml2::xml_text(xml2::xml_find_all(res_xml, "./result/items/item/title")),
     date = xml2::xml_text(xml2::xml_find_all(res_xml, "./result/items/item/date")),
-    price = xml2::xml_text(xml2::xml_find_all(res_xml, "./result/items/item/prices/price")),
-    maker = xml2::xml_text(xml2::xml_find_all(res_xml, "./result/items/item/iteminfo/maker/name")),
-    actress = xml2::xml_text(xml2::xml_find_all(res_xml, "./result/items/item/iteminfo/actress[1]/name")),
-    actress_id = xml2::xml_text(xml2::xml_find_all(res_xml, "./result/items/item/iteminfo/actress[1]/id")),
+    price = xml2::xml_text(xml2::xml_find_all(res_xml, "./result/items/item/prices/price"))
     stringsAsFactors=FALSE
   )  
 }
