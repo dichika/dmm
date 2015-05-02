@@ -8,11 +8,11 @@ See the [reference](https://affiliate.dmm.com/api/reference/r18/digital/all/) fo
 - search and count
 
 ```r
-getCount("蒼井そら")
+getCount("検索ワード")
 ```
 
 - search and get information about items
 
 ```r
-getItemInfo("蒼井そら")
+getItemInfo("検索ワード")
 ```
