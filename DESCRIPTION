@@ -1,0 +1,9 @@
+Package: dmm
+Type: Package
+Title: For using DMM.com API
+Version: 0.1
+Date: 2015-05-01
+Author: dichika
+Description: For using DMM.com API
+Imports: httr,xml2,RCurl
+License: MIT
