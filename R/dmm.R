@@ -13,7 +13,8 @@ getCount <- function(keyword, api_id=options()$DMM_API_ID,affiliate_id=options()
   res_text <- httr::content(res, "text")
   res_xml <- xml2::read_xml(res_text)
   data.frame(
-    count = xml2::xml_text(xml2::xml_find_all(res_xml, "./result/total_count"))
+    count = xml2::xml_text(xml2::xml_find_all(res_xml, "./result/total_count")),
+    stringsAsFactors=FALSE
   )
   
 }
@@ -40,6 +41,7 @@ getItemInfo <- function(keyword, api_id=options()$DMM_API_ID,affiliate_id=option
     price = xml2::xml_text(xml2::xml_find_all(res_xml, "./result/items/item/prices/price")),
     maker = xml2::xml_text(xml2::xml_find_all(res_xml, "./result/items/item/iteminfo/maker/name")),
     actress = xml2::xml_text(xml2::xml_find_all(res_xml, "./result/items/item/iteminfo/actress[1]/name")),
-    actress_id = xml2::xml_text(xml2::xml_find_all(res_xml, "./result/items/item/iteminfo/actress[1]/id"))
+    actress_id = xml2::xml_text(xml2::xml_find_all(res_xml, "./result/items/item/iteminfo/actress[1]/id")),
+    stringsAsFactors=FALSE
   )  
 }
